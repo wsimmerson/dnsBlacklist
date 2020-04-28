@@ -1,0 +1,8 @@
+.idea
+db.sqlite3
+*.pyc
+dnsBlacklist/settings.py
+dnsbl/management/commands/scan_log.py
+dnsbl/management/commands/import_existing.py
+
+/working/
