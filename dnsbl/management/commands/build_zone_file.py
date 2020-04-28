@@ -8,7 +8,7 @@ from dnsbl.models import BlackListedIP
 def nameservers():
     ns = ""
     for n in settings.DNSBL_NAMESERVERS:
-        ns = ns + "\t\t\tIN NS {}\n".format(n)
+        ns = ns + "\t\t\tIN NS {}.\n".format(n)
     return ns
 
 
