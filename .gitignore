@@ -2,7 +2,10 @@
 db.sqlite3
 *.pyc
 dnsBlacklist/settings.py
+
+# below commands are unique to my server setup and are thus, excluded
 dnsbl/management/commands/scan_log.py
 dnsbl/management/commands/import_existing.py
 
+# location of test data files
 /working/

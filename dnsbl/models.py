@@ -33,4 +33,11 @@ class WhiteListedIP(models.Model):
     created = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.ip_address, self.reason_for_whitelisting
+        return self.ip_address
+
+
+class TrustedDomain(models.Model):
+    domain = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.domain
