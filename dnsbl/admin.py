@@ -5,7 +5,7 @@ from dnsbl.models import BlackListedIP, WhiteListedIP, TrustedDomain
 
 
 class BlackListedAdmin(admin.ModelAdmin):
-    list_display = ['ip_address', 'reason_for_blacklisting', 'created']
+    list_display = ['ip_address', 'reason_for_blacklisting', 'created', 'last_seen']
     search_fields = ['ip_address']
 
 

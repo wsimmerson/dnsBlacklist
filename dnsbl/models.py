@@ -11,9 +11,10 @@ def reverse_ip(ip):
 
 
 class BlackListedIP(models.Model):
-    ip_address = models.GenericIPAddressField()
+    ip_address = models.GenericIPAddressField(unique=True)
     reason_for_blacklisting = models.CharField(max_length=255, default="IP Reported for sending SPAM")
     created = models.DateTimeField(default=timezone.now)
+    last_seen = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.ip_address
@@ -28,7 +29,7 @@ class BlackListedIP(models.Model):
 
 
 class WhiteListedIP(models.Model):
-    ip_address = models.GenericIPAddressField()
+    ip_address = models.GenericIPAddressField(unique=True)
     reason_for_whitelisting = models.CharField(max_length=255)
     created = models.DateTimeField(default=timezone.now)
 
